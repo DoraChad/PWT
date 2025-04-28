@@ -18,6 +18,7 @@ const trackUiCreate = function() {
     d1.style.marginRight = "auto";
     d1.style.width = "70%";
     d1.style.height = "200px";
+    d1.style.marginTop = "50px";
 
     md.appendChild(d1);
 
@@ -27,6 +28,8 @@ const trackUiCreate = function() {
     d2.style.marginLeft = "auto"
     d2.style.width = "70%";
     d2.style.height = "200px";
+    d2.style.marginTop = "50px";
+    d2.style.marginBottom = "50px";
 
     md.appendChild(d2);
 
@@ -35,7 +38,7 @@ const trackUiCreate = function() {
     d3.style.position = "absolute";
     d3.style.right = "0";
     d3.style.width = "100%";
-    d3.style.height = "200px";
+    d3.style.height = "350px";
 
     md.appendChild(d3);
 
