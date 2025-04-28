@@ -1,6 +1,50 @@
 const prefix = "https://polyproxy.orangy.cfd/leaderboard?version=0.5.0&trackId=";
 const suffix = "&skip=0&amount=500&onlyVerified=false";
 
+const trackUiCreate = function() {
+    const head = document.getElementById("ui");
+
+    const md = document.createElement("div");
+    md.style.display = "flex";
+    md.style.flexDirection = "column"
+    md.style.width = "100%";
+    md.style.height = "100%";
+
+    head.appendChild(md);
+
+    const d1 = document.createElement("div");
+    d1.style.backgroundColor = "#28346a";
+    d1.style.position = "absolute";
+    d1.style.left = "0";
+    d1.style.width = "40%";
+    d1.style.height = "200px";
+
+    md.appendChild(d1);
+
+    const d2 = document.createElement("div");
+    d2.style.backgroundColor = "#28346a";
+    d2.style.position = "absolute";
+    d2.style.right = "0";
+    d2.style.width = "40%";
+    d2.style.height = "200px";
+
+    md.appendChild(d2);
+
+    const d3 = document.createElement("div");
+    d3.style.backgroundColor = "#28346a";
+    d3.style.position = "absolute";
+    d3.style.right = "0";
+    d3.style.width = "100%";
+    d3.style.height = "200px";
+
+    md.appendChild(d3);
+
+};
+
+const trackUiDestroy = function() {
+
+};
+
 (() => {
   var e = {
       77: (e, t, n) => {
@@ -49142,7 +49186,10 @@ const suffix = "&skip=0&amount=500&onlyVerified=false";
         };
       class AR {
         constructor(e, t, n, i, r, a, s, o, l, c, h) {
-          GI.add(this),
+            //DORACHAD
+            trackUiCreate();
+            //
+          /* GI.add(this),
             QI.set(this, void 0),
             YI.set(this, void 0),
             KI.set(this, void 0),
@@ -49244,12 +49291,12 @@ const suffix = "&skip=0&amount=500&onlyVerified=false";
                 yR(this, GI, "m", vR).call(this),
                 yR(this, GI, "m", mR).call(this, !1);
             }),
-            m.appendChild(yR(this, aR, "f"));
+            m.appendChild(yR(this, aR, "f")); */
         }
         dispose() {
-          var e;
+        /*   var e;
           null === (e = yR(this, oR, "f")) || void 0 === e || e.cancel(),
-            yR(this, eR, "f").removeChild(yR(this, tR, "f"));
+            yR(this, eR, "f").removeChild(yR(this, tR, "f")); */
         }
         static getPositionSuffix(e) {
           if (e <= 0 || !Number.isInteger(e))
