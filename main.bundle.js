@@ -14,18 +14,18 @@ const trackUiCreate = function() {
 
     const d1 = document.createElement("div");
     d1.style.backgroundColor = "#28346a";
-    d1.style.position = "absolute";
-    d1.style.left = "0";
-    d1.style.width = "40%";
+    d1.style.marginLeft = "0";
+    d1.style.marginRight = "auto";
+    d1.style.width = "70%";
     d1.style.height = "200px";
 
     md.appendChild(d1);
 
     const d2 = document.createElement("div");
     d2.style.backgroundColor = "#28346a";
-    d2.style.position = "absolute";
-    d2.style.right = "0";
-    d2.style.width = "40%";
+    d2.style.marginRight = "0";
+    d2.style.marginLeft = "auto"
+    d2.style.width = "70%";
     d2.style.height = "200px";
 
     md.appendChild(d2);
