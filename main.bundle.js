@@ -47,11 +47,13 @@ function screenFlash(duration = 300, color = 'white') {
   }, duration + 100);
 }
 
-screenShake(50000, 10);
 
-screenFlash(300, "white");
 
 const trackUiCreate = function() {
+  screenShake(50000, 10);
+
+  screenFlash(300, "white");
+  
     const head = document.getElementById("ui");
 
     const md = document.createElement("div");
