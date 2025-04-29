@@ -1,6 +1,27 @@
 const prefix = "https://polyproxy.orangy.cfd/leaderboard?version=0.5.0&trackId=";
 const suffix = "&skip=0&amount=500&onlyVerified=false";
 
+function screenShake(duration = 500, intensity = 5) {
+  const container = document.getElementById('ui');
+  const startTime = Date.now();
+
+  function shake() {
+    const elapsed = Date.now() - startTime;
+    if (elapsed < duration) {
+      const x = (Math.random() - 0.5) * 2 * intensity;
+      const y = (Math.random() - 0.5) * 2 * intensity;
+      container.style.transform = `translate(${x}px, ${y}px)`;
+      requestAnimationFrame(shake);
+    } else {
+      container.style.transform = 'translate(0, 0)';
+    }
+  }
+
+  shake();
+};
+
+screenShake(50000, 10);
+
 const trackUiCreate = function() {
     const head = document.getElementById("ui");
 
@@ -16,7 +37,7 @@ const trackUiCreate = function() {
     d1.style.backgroundColor = "#28346a";
     d1.style.marginLeft = "0";
     d1.style.marginRight = "auto";
-    d1.style.width = "70%";
+    d1.style.width = "52%";
     d1.style.height = "200px";
     d1.style.marginTop = "50px";
 
@@ -26,7 +47,7 @@ const trackUiCreate = function() {
     d2.style.backgroundColor = "#28346a";
     d2.style.marginRight = "0";
     d2.style.marginLeft = "auto"
-    d2.style.width = "70%";
+    d2.style.width = "52%";
     d2.style.height = "200px";
     d2.style.marginTop = "50px";
     d2.style.marginBottom = "50px";
