@@ -20,7 +20,36 @@ function screenShake(duration = 500, intensity = 5) {
   shake();
 };
 
+function screenFlash(duration = 300, color = 'white') {
+  // Create the flash div
+  const flash = document.createElement('div');
+  flash.style.position = 'fixed';
+  flash.style.top = '0';
+  flash.style.left = '0';
+  flash.style.width = '100%';
+  flash.style.height = '100%';
+  flash.style.background = color;
+  flash.style.opacity = '1';
+  flash.style.pointerEvents = 'none';
+  flash.style.zIndex = '1000';
+  flash.style.transition = `opacity ${duration}ms ease-out`;
+
+  document.body.appendChild(flash);
+
+  // Trigger fade out
+  setTimeout(() => {
+    flash.style.opacity = '0';
+  }, 10); // small timeout to make sure it's rendered first
+
+  // Remove it after the transition finishes
+  setTimeout(() => {
+    document.body.removeChild(flash);
+  }, duration + 100);
+}
+
 screenShake(50000, 10);
+
+screenFlash(300, "white");
 
 const trackUiCreate = function() {
     const head = document.getElementById("ui");
