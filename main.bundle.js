@@ -50,10 +50,9 @@ function screenFlash(duration = 300, color = 'white') {
 
 
 const trackUiCreate = function() {
-  screenShake(50000, 10);
-
+  screenShake(500, 10);
   screenFlash(300, "white");
-  
+
     const head = document.getElementById("ui");
 
     const md = document.createElement("div");
