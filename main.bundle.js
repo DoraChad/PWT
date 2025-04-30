@@ -67,7 +67,7 @@ const trackUiCreate = function() {
     d1.style.backgroundColor = "#28346a";
     d1.style.marginLeft = "0";
     d1.style.marginRight = "auto";
-    d1.style.width = "60%";
+    d1.style.width = "63%";
     d1.style.height = "200px";
     d1.style.marginTop = "70px";
     d1.style.clipPath = "polygon(0px 0, 100% 0, calc(100% - 150px) 100%, 0 101%)"
@@ -78,7 +78,7 @@ const trackUiCreate = function() {
     d2.style.backgroundColor = "#28346a";
     d2.style.marginRight = "0";
     d2.style.marginLeft = "auto"
-    d2.style.width = "60%";
+    d2.style.width = "63%";
     d2.style.height = "200px";
     d2.style.marginTop = "70px";
     d2.style.marginBottom = "50px";
@@ -50000,7 +50000,7 @@ const trackUiDestroy = function() {
                 "f"
               )
             );  */
-        }
+        };
         dispose() {
           OR(this, LR, "f").dispose(),
             OR(this, _R, "f").removeChild(OR(this, CR, "f")),
