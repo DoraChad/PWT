@@ -67,9 +67,10 @@ const trackUiCreate = function() {
     d1.style.backgroundColor = "#28346a";
     d1.style.marginLeft = "0";
     d1.style.marginRight = "auto";
-    d1.style.width = "52%";
+    d1.style.width = "60%";
     d1.style.height = "200px";
-    d1.style.marginTop = "50px";
+    d1.style.marginTop = "70px";
+    d1.style.clipPath = "polygon(0px 0, 100% 0, calc(100% - 150px) 100%, 0 101%)"
 
     md.appendChild(d1);
 
@@ -77,10 +78,11 @@ const trackUiCreate = function() {
     d2.style.backgroundColor = "#28346a";
     d2.style.marginRight = "0";
     d2.style.marginLeft = "auto"
-    d2.style.width = "52%";
+    d2.style.width = "60%";
     d2.style.height = "200px";
-    d2.style.marginTop = "50px";
+    d2.style.marginTop = "70px";
     d2.style.marginBottom = "50px";
+    d2.style.clipPath = "polygon(150px 0, 100% 0, calc(100% - 0px) 100%, 0 101%)";
 
     md.appendChild(d2);
 
@@ -90,6 +92,8 @@ const trackUiCreate = function() {
     d3.style.right = "0";
     d3.style.width = "100%";
     d3.style.height = "350px";
+    d3.style.bottom = "0";
+    d3.style.marginBottom = "20px"
 
     md.appendChild(d3);
 
