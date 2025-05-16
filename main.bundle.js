@@ -6,21 +6,18 @@ const createBar = function(name, text, parent, onclick) {
 
   const categoryContainer = document.createElement("button");
   categoryContainer.className = `button ${name}`
+  categoryContainer.addEventListener("click", () => {
+    onclick;
+  });
 
   const bar = document.createElement("div");
   bar.className = "cover";
 
   categoryContainer.appendChild(bar);
-
-  const button = document.createElement("button");
-  button.className = `button ${name}`;
-  button.addEventListener("click", () => {
-    onclick;
-  });
+    categoryContainer.appendChild(document.createTextNode(text));
 
   bar.appendChild(button);
-  categoryContainer.appendChild(document.createTextNode(text));
-  
+
   parent.appendChild(categoryContainer);
 };
 
