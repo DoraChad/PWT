@@ -41877,7 +41877,7 @@ const createBar = function(name, text, parent, image_path, onclick) {
           //DORACHAD
           // name, text, parent (to append to), image path, onclick
           // leads to jk = function(e)
-          createBar("games", "PWT Games", u, "images/community_tracks.svg", console.log("e"));
+          createBar("games", "PWT Games", u, "images/community_tracks.jpg", console.log("e"));
           //
           const m = document.createElement("div");
           (m.className = "cover"),
