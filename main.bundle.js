@@ -1,106 +1,27 @@
-const prefix = "https://polyproxy.orangy.cfd/leaderboard?version=0.5.0&trackId=";
-const suffix = "&skip=0&amount=500&onlyVerified=false";
-
-function screenShake(duration = 500, intensity = 5) {
-  const container = document.getElementById('ui');
-  const startTime = Date.now();
-
-  function shake() {
-    const elapsed = Date.now() - startTime;
-    if (elapsed < duration) {
-      const x = (Math.random() - 0.5) * 2 * intensity;
-      const y = (Math.random() - 0.5) * 2 * intensity;
-      container.style.transform = `translate(${x}px, ${y}px)`;
-      requestAnimationFrame(shake);
-    } else {
-      container.style.transform = 'translate(0, 0)';
-    }
-  }
-
-  shake();
-};
-
-function screenFlash(duration = 300, color = 'white') {
-  // Create the flash div
-  const flash = document.createElement('div');
-  flash.style.position = 'fixed';
-  flash.style.top = '0';
-  flash.style.left = '0';
-  flash.style.width = '100%';
-  flash.style.height = '100%';
-  flash.style.background = color;
-  flash.style.opacity = '1';
-  flash.style.pointerEvents = 'none';
-  flash.style.zIndex = '1000';
-  flash.style.transition = `opacity ${duration}ms ease-out`;
-
-  document.body.appendChild(flash);
-
-  // Trigger fade out
-  setTimeout(() => {
-    flash.style.opacity = '0';
-  }, 10); // small timeout to make sure it's rendered first
-
-  // Remove it after the transition finishes
-  setTimeout(() => {
-    document.body.removeChild(flash);
-  }, duration + 100);
-}
 
 
 
-const trackUiCreate = function() {
-  screenShake(500, 10);
-  screenFlash(300, "white");
+const createBar = function(name, text, parent, onclick) {
+  //Create menu bar ui (e.g. official tracks, community tracks, custom tracks)
 
-    const head = document.getElementById("ui");
+  const categoryContainer = document.createElement("button");
+  categoryContainer.className = `button ${name}`
 
-    const md = document.createElement("div");
-    md.style.display = "flex";
-    md.style.flexDirection = "column"
-    md.style.width = "100%";
-    md.style.height = "100%";
+  const bar = document.createElement("div");
+  bar.className = "cover";
 
-    head.appendChild(md);
+  categoryContainer.appendChild(bar);
 
-    const d1 = document.createElement("div");
-    d1.style.backgroundColor = "#28346a";
-    d1.style.marginLeft = "0";
-    d1.style.marginRight = "auto";
-    d1.style.width = "63%";
-    d1.style.height = "200px";
-    d1.style.marginTop = "70px";
-    d1.style.clipPath = "polygon(0px 0, 100% 0, calc(100% - 150px) 100%, 0 101%)"
+  const button = document.createElement("button");
+  button.className = `button ${name}`;
+  button.appendChild(document.createTextNode(text));
+  button.addEventListener("click", () => {
+    onclick;
+  });
 
-    md.appendChild(d1);
-
-    const d2 = document.createElement("div");
-    d2.style.backgroundColor = "#28346a";
-    d2.style.marginRight = "0";
-    d2.style.marginLeft = "auto"
-    d2.style.width = "63%";
-    d2.style.height = "200px";
-    d2.style.marginTop = "70px";
-    d2.style.marginBottom = "50px";
-    d2.style.clipPath = "polygon(150px 0, 100% 0, calc(100% - 0px) 100%, 0 101%)";
-
-    md.appendChild(d2);
-
-    const d3 = document.createElement("div");
-    d3.style.backgroundColor = "#28346a";
-    d3.style.position = "absolute";
-    d3.style.right = "0";
-    d3.style.width = "100%";
-    d3.style.height = "350px";
-    d3.style.bottom = "0";
-    d3.style.marginBottom = "20px"
-
-    md.appendChild(d3);
-
-};
-
-const trackUiDestroy = function() {
-
+  bar.appendChild(button);
+  
+  parent.appendChild(categoryContainer);
 };
 
 (() => {
@@ -41927,6 +41848,11 @@ const trackUiDestroy = function() {
                 Kk(this, mk, "m", jk).call(this, "official");
             }),
             u.appendChild(Kk(this, Tk, "f"));
+          //DORACHAD
+          // name, text, parent (to append to), onclick
+          // leads to jk = function(e)
+          createBar("games", "PWT Games", u, Kk(this, mk, "m", jk).call(this, "community"));
+          //
           const p = document.createElement("div");
           (p.className = "cover"),
             Kk(this, Tk, "f").prepend(p),
@@ -49244,10 +49170,7 @@ const trackUiDestroy = function() {
         };
       class AR {
         constructor(e, t, n, i, r, a, s, o, l, c, h) {
-            //DORACHAD
-            trackUiCreate();
-            //
-          /* GI.add(this),
+            GI.add(this),
             QI.set(this, void 0),
             YI.set(this, void 0),
             KI.set(this, void 0),
@@ -49349,12 +49272,12 @@ const trackUiDestroy = function() {
                 yR(this, GI, "m", vR).call(this),
                 yR(this, GI, "m", mR).call(this, !1);
             }),
-            m.appendChild(yR(this, aR, "f")); */
+            m.appendChild(yR(this, aR, "f"));
         }
         dispose() {
-        /*   var e;
+          var e;
           null === (e = yR(this, oR, "f")) || void 0 === e || e.cancel(),
-            yR(this, eR, "f").removeChild(yR(this, tR, "f")); */
+            yR(this, eR, "f").removeChild(yR(this, tR, "f"));
         }
         static getPositionSuffix(e) {
           if (e <= 0 || !Number.isInteger(e))
