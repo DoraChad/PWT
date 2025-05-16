@@ -14,12 +14,12 @@ const createBar = function(name, text, parent, onclick) {
 
   const button = document.createElement("button");
   button.className = `button ${name}`;
-  button.appendChild(document.createTextNode(text));
   button.addEventListener("click", () => {
     onclick;
   });
 
   bar.appendChild(button);
+  bar.appendChild(document.createTextNode(text));
   
   parent.appendChild(categoryContainer);
 };
