@@ -19,7 +19,7 @@ const createBar = function(name, text, parent, onclick) {
   });
 
   bar.appendChild(button);
-  bar.appendChild(document.createTextNode(text));
+  categoryContainer.appendChild(document.createTextNode(text));
   
   parent.appendChild(categoryContainer);
 };
