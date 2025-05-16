@@ -1,7 +1,7 @@
 
 
 
-const createBar = function(name, text, parent, onclick) {
+const createBar = function(name, text, parent, image_path, onclick) {
   //Create menu bar ui (e.g. official tracks, community tracks, custom tracks)
 
   const categoryContainer = document.createElement("button");
@@ -13,6 +13,10 @@ const createBar = function(name, text, parent, onclick) {
   const bar = document.createElement("div");
   bar.className = "cover";
 
+  const img = document.createElement("img");
+  img.src = image_path;
+
+  categoryContainer.appendChild(img);
   categoryContainer.appendChild(bar);
   categoryContainer.appendChild(document.createTextNode(text));
 
@@ -41871,9 +41875,9 @@ const createBar = function(name, text, parent, onclick) {
             }),
             u.appendChild(Kk(this, Ck, "f"));
           //DORACHAD
-          // name, text, parent (to append to), onclick
+          // name, text, parent (to append to), image path, onclick
           // leads to jk = function(e)
-          createBar("games", "PWT Games", u, console.log("e"));
+          createBar("games", "PWT Games", u, "images/community_tracks.svg", console.log("e"));
           //
           const m = document.createElement("div");
           (m.className = "cover"),
