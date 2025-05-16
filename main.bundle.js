@@ -13,10 +13,13 @@ const createBar = function(name, text, parent, image_path, onclick) {
   const bar = document.createElement("div");
   bar.className = "cover";
 
-  const img = document.createElement("img");
-  img.src = image_path;
+  const style = document.createElement('style');
+  style.textContent = `
+  .track-selection .category-container > button.${name}::before {
+      background-image: url(https://dorachad.github.io/PWT/${image_path});
+  }`;
+  document.head.appendChild(style);
 
-  categoryContainer.appendChild(img);
   categoryContainer.appendChild(bar);
   categoryContainer.appendChild(document.createTextNode(text));
 
