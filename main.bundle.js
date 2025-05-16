@@ -41843,11 +41843,7 @@ const createBar = function(name, text, parent, onclick) {
                 Kk(this, mk, "m", jk).call(this, "official");
             }),
             u.appendChild(Kk(this, Tk, "f"));
-          //DORACHAD
-          // name, text, parent (to append to), onclick
-          // leads to jk = function(e)
-          createBar("games", "PWT Games", u, console.log("e"));
-          //
+          
           const p = document.createElement("div");
           (p.className = "cover"),
             Kk(this, Tk, "f").prepend(p),
@@ -41874,6 +41870,11 @@ const createBar = function(name, text, parent, onclick) {
                 Kk(this, mk, "m", jk).call(this, "custom");
             }),
             u.appendChild(Kk(this, Ck, "f"));
+          //DORACHAD
+          // name, text, parent (to append to), onclick
+          // leads to jk = function(e)
+          createBar("games", "PWT Games", u, console.log("e"));
+          //
           const m = document.createElement("div");
           (m.className = "cover"),
             Kk(this, Ck, "f").prepend(m),
@@ -49648,9 +49649,7 @@ const createBar = function(name, text, parent, onclick) {
         });
       const FR = class {
         constructor(e, t, n, i, r, a, s, o, l, c, h, d, u, p, f, m, g) {
-          //DORACHAD
-
-          /* var v;
+          var v;
           xR.add(this),
             kR.set(this, void 0),
             ER.set(this, void 0),
@@ -49917,7 +49916,7 @@ const createBar = function(name, text, parent, onclick) {
                 },
                 "f"
               )
-            );  */
+            ); 
         };
         dispose() {
           OR(this, LR, "f").dispose(),
