@@ -14,9 +14,7 @@ const createBar = function(name, text, parent, onclick) {
   bar.className = "cover";
 
   categoryContainer.appendChild(bar);
-    categoryContainer.appendChild(document.createTextNode(text));
-
-  bar.appendChild(button);
+  categoryContainer.appendChild(document.createTextNode(text));
 
   parent.appendChild(categoryContainer);
 };
