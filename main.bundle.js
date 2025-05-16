@@ -41851,7 +41851,7 @@ const createBar = function(name, text, parent, onclick) {
           //DORACHAD
           // name, text, parent (to append to), onclick
           // leads to jk = function(e)
-          createBar("games", "PWT Games", u, Kk(this, mk, "m", jk).call(this, "community"));
+          createBar("games", "PWT Games", u, console.log("e"));
           //
           const p = document.createElement("div");
           (p.className = "cover"),
