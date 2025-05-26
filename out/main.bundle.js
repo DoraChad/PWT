@@ -1,4 +1,3 @@
-
 (() => {
   const e = {
     77: (e, t, n) => {
@@ -50739,7 +50738,7 @@
     let jk;
     let Qk;
 
-    const set = (e, t, n, i, r) => {
+    const Yk = (e, t, n, i, r) => {
       if (i === "m") {
         throw new TypeError("Private method is not writable");
       }
@@ -51092,17 +51091,17 @@
         Wk.set(this, undefined);
         Vk.set(this, undefined);
         Hk.set(this, undefined);
-        set(this, gk, e, "f");
-        set(this, vk, t, "f");
-        set(this, wk, n, "f");
-        set(this, yk, i, "f");
-        set(this, Ak, r, "f");
-        set(this, bk, a, "f");
-        set(this, xk, s, "f");
-        set(this, kk, o, "f");
-        set(this, Ek, l, "f");
-        set(this, Sk, h, "f");
-        set(this, Mk, document.createElement("div"), "f");
+        Yk(this, gk, e, "f");
+        Yk(this, vk, t, "f");
+        Yk(this, wk, n, "f");
+        Yk(this, yk, i, "f");
+        Yk(this, Ak, r, "f");
+        Yk(this, bk, a, "f");
+        Yk(this, xk, s, "f");
+        Yk(this, kk, o, "f");
+        Yk(this, Ek, l, "f");
+        Yk(this, Sk, h, "f");
+        Yk(this, Mk, document.createElement("div"), "f");
         get(this, Mk, "f").className = "hidden";
         e.appendChild(get(this, Mk, "f"));
         const d = document.createElement("div");
@@ -51111,7 +51110,7 @@
         const u = document.createElement("div");
         u.className = "category-container";
         get(this, Mk, "f").appendChild(u);
-        set(this, Tk, document.createElement("button"), "f");
+        Yk(this, Tk, document.createElement("button"), "f");
         get(this, Tk, "f").className = "button official selected";
 
         get(this, Tk, "f").append(
@@ -51127,7 +51126,7 @@
         const p = document.createElement("div");
         p.className = "cover";
         get(this, Tk, "f").prepend(p);
-        set(this, _k, document.createElement("button"), "f");
+        Yk(this, _k, document.createElement("button"), "f");
         get(this, _k, "f").className = "button community";
 
         get(this, _k, "f").append(
@@ -51143,7 +51142,7 @@
         const f = document.createElement("div");
         f.className = "cover";
         get(this, _k, "f").prepend(f);
-        set(this, Ck, document.createElement("button"), "f");
+        Yk(this, Ck, document.createElement("button"), "f");
         get(this, Ck, "f").className = "button custom";
 
         get(this, Ck, "f").append(
@@ -51159,41 +51158,15 @@
         const m = document.createElement("div");
         m.className = "cover";
         get(this, Ck, "f").prepend(m);
-
-        //DORA
-        set(this, pwt_ck, document.createElement("button"), "f");
-        get(this, pwt_ck, "f").className = "button custom";
-
-        get(this, pwt_ck, "f").append(
-          document.createTextNode(get(this, vk, "f").get("Custom tracks"))
-        );
-
-        get(this, pwt_ck, "f").addEventListener("click", () => {
-          get(this, wk, "f").playUIClick();
-          get(this, mk, "m", jk).call(this, "pwt");
-        });
-
-        u.appendChild(get(this, pwt_ck, "f"));
-        const pwt_m = document.createElement("div");
-        pwt_m.className = "cover";
-        get(this, pwt_ck, "f").prepend(pwt_m);
-        //        
-
-
-        set(this, Pk, document.createElement("div"), "f");
+        Yk(this, Pk, document.createElement("div"), "f");
         get(this, Pk, "f").className = "tracks-container open";
         get(this, Mk, "f").appendChild(get(this, Pk, "f"));
-        set(this, Ik, document.createElement("div"), "f");
+        Yk(this, Ik, document.createElement("div"), "f");
         get(this, Ik, "f").className = "tracks-container";
         get(this, Mk, "f").appendChild(get(this, Ik, "f"));
-        set(this, Rk, document.createElement("div"), "f");
+        Yk(this, Rk, document.createElement("div"), "f");
         get(this, Rk, "f").className = "tracks-container";
         get(this, Mk, "f").appendChild(get(this, Rk, "f"));
-        //DORA
-        set(this, pwt_pk, document.createElement("div"), "f");
-        get(this, pwt_pk, "f").className = "tracks-container";
-        get(this, Mk, "f").appendChild(get(this, pwt_pk, "f"));
-        //
         const g = document.createElement("button");
         g.className = "button";
 
@@ -51216,7 +51189,7 @@
         const v = document.createElement("div");
         v.className = "search-bar-container";
         d.appendChild(v);
-        set(this, Uk, document.createElement("input"), "f");
+        Yk(this, Uk, document.createElement("input"), "f");
         get(this, Uk, "f").type = "text";
         get(this, Uk, "f").spellcheck = false;
         get(this, Uk, "f").autocomplete = "off";
@@ -51244,7 +51217,7 @@
           get(this, wk, "f").playUIClick();
           this.hide();
 
-          set(
+          Yk(
             this,
             zk,
             new Hx(
@@ -51259,7 +51232,7 @@
                   }
                 }
 
-                set(this, zk, null, "f");
+                Yk(this, zk, null, "f");
               },
               (e, t, n, i) => {
                 let r;
@@ -51270,7 +51243,7 @@
                   }
                 }
 
-                set(this, zk, null, "f");
+                Yk(this, zk, null, "f");
                 get(this, mk, "m", jk).call(this, "custom");
                 get(this, Sk, "f").call(this, e, t, "custom", n, i);
               },
@@ -51288,7 +51261,7 @@
 
         window.addEventListener(
           "keydown",
-          set(
+          Yk(
             this,
             Wk,
             (e) => {
@@ -51302,7 +51275,7 @@
         );
 
         get(this, Ak, "f").addCustomTracksChangedListener(
-          set(
+          Yk(
             this,
             Vk,
             () => {
@@ -51322,16 +51295,6 @@
           { passive: true }
         );
 
-        //DORA
-        get(this, pwt_pk, "f").addEventListener(
-          "scroll",
-          () => {
-            pwt_kk = get(this, pwt_pk, "f").scrollTop;
-          },
-          { passive: true }
-        );
-        //
-
         get(this, Ik, "f").addEventListener(
           "scroll",
           () => {
@@ -51349,7 +51312,7 @@
         );
 
         get(this, yk, "f").addRecordChangedCallback(
-          set(
+          Yk(
             this,
             Hk,
             () => {
@@ -51370,7 +51333,7 @@
           }
         }
 
-        set(this, zk, null, "f");
+        Yk(this, zk, null, "f");
 
         get(this, Ak, "f").removeCustomTracksChangedListener(get(this, Vk, "f"));
 
@@ -51378,7 +51341,7 @@
       }
       hide() {
         get(this, Mk, "f").className = "hidden";
-        set(this, Ok, false, "f");
+        Yk(this, Ok, false, "f");
       }
       show() {
         if (get(this, Ek, "f")) {
@@ -51388,7 +51351,7 @@
           get(this, Mk, "f").className = "track-selection";
         }
 
-        set(this, Ok, true, "f");
+        Yk(this, Ok, true, "f");
 
         if (!get(this, Fk, "f")) {
           this.refresh();
@@ -51402,72 +51365,25 @@
           get(this, Tk, "f").classList.add("selected");
           get(this, _k, "f").classList.remove("selected");
           get(this, Ck, "f").classList.remove("selected");
-
-          //DORA
-          get(this, pwt_ck, "f").classList.remove("selected");
-          //
-
           get(this, Pk, "f").classList.add("open");
           get(this, Ik, "f").classList.remove("open");
           get(this, Rk, "f").classList.remove("open");
-
-          //DORA
-          get(this, pwt_pk, "f").classList.remove("open");
-          //
-
           get(this, Pk, "f").scrollTop = Xk;
         } else if (qk == "community") {
           get(this, Tk, "f").classList.remove("selected");
           get(this, _k, "f").classList.add("selected");
           get(this, Ck, "f").classList.remove("selected");
-
-          //DORA
-          get(this, pwt_ck, "f").classList.remove("selected");
-          //
-
           get(this, Pk, "f").classList.remove("open");
           get(this, Ik, "f").classList.add("open");
           get(this, Rk, "f").classList.remove("open");
           get(this, Ik, "f").scrollTop = Zk;
-
-          //DORA
-          get(this, pwt_pk, "f").classList.remove("open");
-          //
-
-      //DORA
-        } else if (qk == "pwt") {
-          get(this, Tk, "f").classList.remove("selected");
-          get(this, _k, "f").classList.remove("selected");
-          get(this, Ck, "f").classList.remove("selected");
-
-          get(this, pwt_ck, "f").classList.add("selected");
-
-          get(this, Pk, "f").classList.remove("open");
-          get(this, Ik, "f").classList.remove("open");
-          get(this, Rk, "f").classList.remove("open");
-
-          get(this, pwt_pk, "f").classList.add("open");
-
-          get(this, pwt_pk, "f").scrollTop = pwt_kk;
-
-      //
         } else {
           get(this, Tk, "f").classList.remove("selected");
           get(this, _k, "f").classList.remove("selected");
           get(this, Ck, "f").classList.add("selected");
-
-          //DORA
-          get(this, pwt_ck, "f").classList.remove("selected");
-          //
-
           get(this, Pk, "f").classList.remove("open");
           get(this, Ik, "f").classList.remove("open");
           get(this, Rk, "f").classList.add("open");
-
-          //DORA
-          get(this, pwt_pk, "f").classList.remove("open");
-          //
-
           get(this, Rk, "f").scrollTop = Jk;
         }
       }
@@ -51475,11 +51391,10 @@
         return get(this, Ok, "f") || get(this, zk, "f") != null;
       }
       refresh() {
-        set(this, Bk, [], "f");
+        Yk(this, Bk, [], "f");
         get(this, Pk, "f").innerHTML = "";
         get(this, Ik, "f").innerHTML = "";
         get(this, Rk, "f").innerHTML = "";
-
         get(this, Lk, "f").clear();
         get(this, Dk, "f").clear();
         get(this, Nk, "f").clear();
@@ -51550,7 +51465,7 @@
           });
         }
         get(this, mk, "m", Qk).call(this);
-        set(this, Fk, true, "f");
+        Yk(this, Fk, true, "f");
       }
     };
     const eE = n(2346);
