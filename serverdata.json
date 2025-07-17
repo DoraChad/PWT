@@ -1,0 +1,32 @@
+{
+    "teams": {
+        "CHG": {
+            "players": [],
+            "color": "pink"
+        },
+        "BPG": {
+            "players": [],
+            "color": "green"
+        }
+    },
+    "games": [
+        {
+            "starttime": "2025-07-10T12:00:00.000Z",
+            "endtime": "2025-07-28T12:00:00.000Z",
+            "teams": ["CHG", "BPG"],
+            "track": "Ohios Rizzler"
+        },
+        {
+            "starttime": "2025-07-10T12:00:00.000Z",
+            "endtime": "2025-07-14T12:00:00.000Z",
+            "teams": [2, 3],
+            "track": "Fabrication"
+        },
+        {
+            "starttime": "2025-07-10T12:00:00.000Z",
+            "endtime": "2025-07-12T12:00:00.000Z",
+            "teams": [4, 5],
+            "track": "Summer 32"
+        }
+    ]
+}
